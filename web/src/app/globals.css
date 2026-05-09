@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #fff1f2;
+  --color-primary-100: #ffe4e6;
+  --color-primary-500: #e11d48;
+  --color-primary-600: #8f001a; /* uOttawa Garnet */
+  --color-background: #111111; /* Dark charcoal */
+  --color-surface: #222222;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --font-sans: var(--font-inter, sans-serif);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    background-image: radial-gradient(
+      circle at 50% 0%,
+      rgba(143, 0, 26, 0.15), /* Garnet glow */
+      transparent 50%
+    );
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(34, 34, 34, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .glass-card {
+    background: linear-gradient(145deg, rgba(34, 34, 34, 0.8), rgba(17, 17, 17, 0.9));
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(143, 0, 26, 0.15); /* Garnet shadow */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #e11d48, #8f001a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
