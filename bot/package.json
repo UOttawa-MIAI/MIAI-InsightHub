@@ -9,7 +9,7 @@
   "dependencies": {
     "@google/genai": "^2.0.1",
     "discord-hono": "^0.21.2",
-    "hono": "^4.12.18"
+    "hono": "^4.13.5"
   },
   "devDependencies": {
     "wrangler": "^4.4.0"
